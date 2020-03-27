@@ -1,6 +1,3 @@
-
-# A very simple Flask Hello World app for you to get started with...
-
 from flask import Flask
 import pandas as pd
 
@@ -13,7 +10,6 @@ with open('/home/zonyl/covid/population.csv', "r") as csvfile:
 	reader = csv.DictReader(csvfile)
 	for row in reader:
 		popData[row['Country Name']] = row['2018']
-
 
 def perCapita(series):
 
@@ -64,5 +60,4 @@ def hello_world():
 	df = df[["Country_Region", "pop", "cpc", "dpc", "rpc", "apc"]]
 	table = df.to_json(orient='split')
 	return table
-	#return url
 
