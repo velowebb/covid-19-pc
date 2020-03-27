@@ -1,0 +1,45 @@
+<html>
+
+    <head>
+        <title>Per Capita COVID-19 Numbers</title>
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" ></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#table').DataTable( {
+                    'ajax':{url: '/', dataSrc: 'data'},
+                    'paging':false
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Country Region</th>
+                    <th>pop in thousands</th>
+                    <th>Confirmed / 1000</th>
+                    <th>Deaths / 1000</th>
+                    <th>Recovered / 1000</th>
+                    <th>Active / 1000</th>
+                </tr>
+            </thead>
+
+        </table>
+        <center>
+            <big>* no reasonable population data found for this country</big>
+            <small>I got tired of seeing the JHU COVID-19 data without per capita values.</small>
+            <br />
+            <small>markthisup {at} gmail</small>
+            <br />
+            <small>'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/{}.csv'.format(yesterday)</small>
+            <br />
+            <small>2018 population data from https://data.worldbank.org/indicator/sp.pop.totl</small>
+        </center>
+    </body>
+</html>
