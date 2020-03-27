@@ -41,7 +41,14 @@ def stupidCountries():
         "Congo (Kinshasa)":"Congo, Dem. Rep.",
         "Congo (Brazzaville)": "Congo, Rep.",
         "Czechia" : "Czech Republic",
-        "Gambia" : "Gambia, The"
+        "Gambia" : "Gambia, The",
+        "Bahamas" : "Bahamas, The",
+        "Brunei": "Brunei Darussalam",
+        "Kyrgyzstan" :"Kyrgyz Republic",
+        "Laos":"Lao PDR",
+        "Holy See":"",
+        "Slovakia":"Slovak Republic",
+        "Syria":"Syrian Arab Republic"
     }
 
 @app.route('/')
